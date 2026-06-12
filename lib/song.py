@@ -2,8 +2,8 @@ class Song:
     total_songs = 0
     unique_artists = set()
     unique_genres = set()
-    genre_count = {} # Added 's' to match the constructor usage
-    artist_count = {} # Added 's' to match the constructor usage
+    genre_counts = {} # Added 's' to match the constructor usage
+    artist_counts = {} # Added 's' to match the constructor usage
 
     def __init__(self,title,artist,genre):
         self.title = title
