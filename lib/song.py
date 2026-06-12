@@ -1,12 +1,15 @@
+from os import name
+
+
 class Song:
-    total_songs = 0
-    unique_artists = set()
-    unique_genres = set()
+    count = 0
+    artists = set()
+    genres = set()
     genre_counts = {} # Added 's' to match the constructor usage
     artist_counts = {} # Added 's' to match the constructor usage
 
     def __init__(self,title,artist,genre):
-        self.title = title
+        self.name = name
         self.artist = artist
         self.genre = genre
 
