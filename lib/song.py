@@ -3,6 +3,7 @@ from os import name
 
 class Song:
     count = 0
+    total_songs = 0 
     artists = set()
     genres = set()
     genre_counts = {} # Added 's' to match the constructor usage
@@ -13,9 +14,10 @@ class Song:
         self.artist = artist
         self.genre = genre
 
+        Song.count += 1
         Song.total_songs += 1
-        Song.unique_artists.add(self.artist)
-        Song.unique_genres.add(self.genre)
+        Song.artists.add(self.artist)
+        Song.genres.add(self.genre)
 
         Song.genre_counts[self.genre] = Song.genre_counts.get(self.genre, 0) + 1
         Song.artist_counts[self.artist] = Song.artist_counts.get(self.artist, 0) + 1
